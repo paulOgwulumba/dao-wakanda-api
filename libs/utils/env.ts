@@ -6,7 +6,4 @@ dotenv.config({ path: path.join(__dirname, '..', '..', '..', '.env') });
 
 const { env } = process;
 
-console.log('env', env.MONGODB_URI);
-console.log('path', path.join(__dirname, '..', '..', '..', '.env'));
-
 export { env };

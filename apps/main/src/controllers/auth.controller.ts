@@ -21,7 +21,7 @@ export class AuthController {
   @ApiOperation({ summary: 'Create admin account' })
   @ApiBearerAuth('Bearer')
   @ApiBody({ type: CreateAdminDto })
-  // @UseGuards(AdminJwtAuthGuard)
+  @UseGuards(AdminJwtAuthGuard)
   @Post('admin')
   createAdmin(@Body() createAdminDto: CreateAdminDto) {
     return this.authService.createAdmin(createAdminDto);

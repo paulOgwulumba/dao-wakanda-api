@@ -16,9 +16,6 @@ export class AdminService {
 
     private readonly bcryptService: BcryptService
   ) {}
-  greetings() {
-    return "Hi I'm Jarvis";
-  }
 
   async createAdmin(email: string, password: string) {
     const existingAdmin = await this.findAdminByEmail(email);

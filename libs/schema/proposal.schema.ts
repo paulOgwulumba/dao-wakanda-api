@@ -8,8 +8,8 @@ export class Proposal {
   @Prop()
   appId: string;
 
-  @Prop()
-  asaId: number;
+  @Prop({ required: false })
+  asaId?: string;
 
   @Prop()
   title: string;

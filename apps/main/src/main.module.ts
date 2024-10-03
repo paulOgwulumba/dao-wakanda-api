@@ -9,7 +9,7 @@ import { ProposalController } from './controllers/proposal.controller';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(env.MONGODB_URI, { dbName: 'test' }),
+    MongooseModule.forRoot(env.MONGODB_URI, { dbName: env.MONGODB_DATABASE }),
     AuthModule,
     AdminModule,
     ProposalModule,
